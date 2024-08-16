@@ -1,0 +1,68 @@
+export default function Description({ heading, description }) {
+  const weatherCodes = {
+    0: "Clear sky",
+    1: "Mainly clear",
+    2: "Partly cloudy",
+    3: "Overcast",
+    45: "Fog",
+    48: "Depositing rime fog",
+    51: "Drizzle: Light intensity",
+    53: "Drizzle: Moderate intensity",
+    55: "Drizzle: Dense intensity",
+    56: "Freezing Drizzle: Light intensity",
+    57: "Freezing Drizzle: Dense intensity",
+    61: "Rain: Slight intensity",
+    63: "Rain: Moderate intensity",
+    65: "Rain: Heavy intensity",
+    66: "Freezing Rain: Light intensity",
+    67: "Freezing Rain: Heavy intensity",
+    71: "Snow fall: Slight intensity",
+    73: "Snow fall: Moderate intensity",
+    75: "Snow fall: Heavy intensity",
+    77: "Snow grains",
+    80: "Rain showers: Slight intensity",
+    81: "Rain showers: Moderate intensity",
+    82: "Rain showers: Violent intensity",
+    85: "Snow showers: Slight intensity",
+    86: "Snow showers: Heavy intensity",
+    95: "Thunderstorm: Slight or moderate",
+    96: "Thunderstorm with slight hail",
+    99: "Thunderstorm with heavy hail",
+  };
+  const weatherDescriptions = {
+    0: "Enjoy a day with clear skies and abundant sunshine. Temperatures will be pleasant, making it an ideal time for outdoor activities.",
+    1: "The sky will be mostly clear with a few scattered clouds. Expect mild temperatures and a bright, sunny day.",
+    2: "Partly cloudy skies will allow for some sunshine throughout the day. Temperatures will be moderate, with comfortable conditions.",
+    3: "The sky will be completely overcast, with little to no sunshine. Temperatures might feel cooler due to the lack of sunlight.",
+    45: "Visibility will be reduced due to fog, especially in the early morning. Be cautious if driving, as conditions may be hazardous.",
+    48: "Dense fog with rime ice formation is expected, especially on cold surfaces. This can make for slippery conditions, so take care.",
+    51: "Light drizzle will fall intermittently throughout the day. While it's not heavy, it might be enough to dampen outdoor plans.",
+    53: "Expect a steady drizzle with moderate intensity. It's a good idea to carry an umbrella if you're heading out.",
+    55: "A dense drizzle will persist, making the day feel damp and cool. Stay dry and consider indoor activities.",
+    56: "Light freezing drizzle will create icy surfaces. Exercise caution when walking or driving, as roads and sidewalks may be slick.",
+    57: "Dense freezing drizzle will lead to significant ice buildup on surfaces. This can create dangerous conditions, so stay alert.",
+    61: "Light rain will fall intermittently, creating a gentle, refreshing atmosphere. You may want to keep a raincoat handy.",
+    63: "Moderate rain showers are expected throughout the day. It will be a wet day, so plan accordingly.",
+    65: "Heavy rain will dominate the day, potentially leading to localized flooding. Stay indoors if possible and be prepared for wet conditions.",
+    66: "Light freezing rain will coat surfaces with a thin layer of ice. Be cautious, as this can make roads and walkways slippery.",
+    67: "Heavy freezing rain will result in significant ice accumulation. Expect dangerous travel conditions and possible power outages.",
+    71: "Light snow will fall, dusting the ground with a thin layer of white. It's a picturesque day, perfect for a winter stroll.",
+    73: "Moderate snowfall will cover the ground, creating a winter wonderland. Be prepared for cooler temperatures and snow-covered roads.",
+    75: "Heavy snow is expected, leading to significant accumulation. Travel may be difficult, so it's best to stay indoors.",
+    77: "Tiny snow grains will fall sporadically, creating a light dusting. These are small, hard particles of snow, often seen in colder temperatures.",
+    80: "Light rain showers will come and go, bringing brief periods of rainfall. The day will have a mix of wet and dry conditions.",
+    81: "Expect moderate rain showers throughout the day. These will be more intense than drizzle, so keep an umbrella handy.",
+    82: "Intense rain showers will occur, with brief but heavy downpours. Be prepared for sudden bursts of rain and possible flooding.",
+    85: "Light snow showers will create a gentle snowfall, with brief periods of accumulation. It will be a wintry day, with cool temperatures.",
+    86: "Heavy snow showers will bring significant snowfall in short bursts. Roads may become quickly covered, so drive carefully.",
+    95: "A thunderstorm with slight to moderate intensity is expected. There will be occasional lightning and thunder, so stay indoors if possible.",
+    96: "A thunderstorm with slight hail will occur, with small hailstones mixed in with rain. Be cautious of potential hail damage.",
+    99: "A severe thunderstorm with heavy hail is expected. Large hailstones could cause damage to property and vehicles, so take shelter.",
+  };
+  return (
+    <div className="state-box">
+      <h1>{weatherCodes[heading]}</h1>
+      <p>{weatherDescriptions[description]}</p>
+    </div>
+  );
+}
