@@ -36,6 +36,8 @@ Welcome to the **Weather App** repository! This project is a simple and intuitiv
 3. **npm start**:
     - You can run this on the go.
       ```
+      npm i
+      npm start
     - Then, open your browser and navigate to `http://localhost:8080` (or the port provided by your local server).
 
 
